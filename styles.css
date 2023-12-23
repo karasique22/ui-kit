@@ -1,0 +1,129 @@
+h1 {
+	width: 100%;
+	border-bottom: 2px solid black;
+	font-weight: 400;
+	text-align: start;
+	margin-bottom: 1em;
+}
+
+body {
+	background-color: #f4f4f4;
+	padding: 1.5em 0;
+	font-family: Helvetica, sans-serif;
+	color: #333;
+}
+
+.wrapper {
+	width: 80%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	gap: 4em;
+	margin: auto;
+}
+
+.container {
+	width: 100%;
+}
+
+/* Buttons */
+
+.buttons-wrapper {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	max-width: 70%;
+	justify-self: center;
+	margin: auto;
+}
+
+.btn {
+	width: max-content;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	padding: 12px 25px;
+	font-family: Resist Sans Text, sans-serif;
+	font-size: 20px;
+	cursor: pointer;
+	transition: background 0.3s, color 0.3s;
+
+}
+
+.btn-container {
+	width: max-content;
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	justify-self: center;
+}
+
+/* Primary button  */
+
+.btn-primary {
+	background: #f23883f0;
+	border-radius: 30px;
+	color: white;
+}
+
+.btn-primary:hover {
+	background: #e03378;
+}
+
+.btn-primary:active {
+	background: #de1f6c;
+}
+
+.btn-primary:disabled {
+	background: #b3b3b3;
+}
+
+/* Secondary button */
+
+.btn-secondary {
+	border: 1px solid #f23883;
+	border-radius: 30px;
+	color: #f23883;
+}
+
+.btn-secondary:hover {
+	background: #ff71aaf0;
+	color: white;
+}
+
+.btn-secondary:active {
+	background: #f14289;
+	color: white;
+}
+
+.btn-secondary:disabled {
+	border: 1px solid #b3b3b3;
+	background-color: transparent;
+	color: #b3b3b3;
+}
+
+/* Tertiary button*/
+
+.btn-tertiary1 {
+	color: black;
+}
+
+.btn-tertiary1:hover {
+	color: #FE78AE;
+}
+
+.btn-tertiary1:active {
+	color: #F23883F0;
+}
+
+.btn-tertiary2 {
+	color: #F14289;
+}
+
+.btn-tertiary2:hover {
+	color: #E03E7F;
+}
+
+.btn-tertiary2:active {
+	color: #DF2B73;
+}
