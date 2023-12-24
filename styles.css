@@ -31,8 +31,6 @@ body {
 .buttons-wrapper {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	max-width: 70%;
-	justify-self: center;
 	margin: auto;
 }
 
@@ -47,7 +45,6 @@ body {
 	font-size: 20px;
 	cursor: pointer;
 	transition: background 0.3s, color 0.3s;
-
 }
 
 .btn-container {
@@ -109,21 +106,91 @@ body {
 }
 
 .btn-tertiary1:hover {
-	color: #FE78AE;
+	color: #fe78ae;
 }
 
 .btn-tertiary1:active {
-	color: #F23883F0;
+	color: #f23883f0;
 }
 
 .btn-tertiary2 {
-	color: #F14289;
+	color: #f14289;
 }
 
 .btn-tertiary2:hover {
-	color: #E03E7F;
+	color: #e03e7f;
 }
 
 .btn-tertiary2:active {
-	color: #DF2B73;
+	color: #df2b73;
+}
+
+/* Checkbox */
+
+.checkbox-wrapper {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1em;
+	margin: auto;
+}
+
+.checkbox-container {
+	width: max-content;
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	justify-self: center;
+}
+
+.checkbox input[type="checkbox"] {
+	display: none;
+}
+
+.checkbox label {
+	display: inline-block;
+	position: relative;
+	padding: 0;
+	width: 34px;
+	height: 34px;
+	border: 2px solid #000000;
+	background-color: transparent;
+	transition: background-color 0.3s, border-color 0.3s, border-width 0.05s;
+	cursor: pointer;
+}
+
+.checkbox input[type="checkbox"]:checked + label {
+	background-color: #ff4690f0;
+	border: none;
+}
+
+.checkbox input[type="checkbox"]:checked + label::after {
+	content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none"><path d="M7.4375 16.8559L13.8823 25.0359L26.5241 8.92383" stroke="white" stroke-width="1.98302"/></svg>');
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 34px;
+	height: 34px;
+}
+
+/* Hovered */
+.checkbox input[type="checkbox"]:hover:not(:disabled) + label {
+	border-color: #f23883;
+}
+
+.checkbox input[type="checkbox"]:checked:hover:not(:disabled) + label {
+	background-color: #f23883;
+	border: none;
+}
+
+/* Disabled */
+
+.checkbox input[type="checkbox"]:disabled + label {
+	background-color: #b3b3b3;
+	border: none;
+	cursor: default;
+}
+
+.checkbox input[type="checkbox"]:not(:checked):disabled + label {
+	background-color: transparent;
+	border: 2px solid #0000004d;
 }
