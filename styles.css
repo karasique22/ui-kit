@@ -1,9 +1,9 @@
 h1 {
 	width: 100%;
+	margin-bottom: 1em;
 	border-bottom: 2px solid black;
 	font-weight: 400;
 	text-align: start;
-	margin-bottom: 1em;
 }
 
 body {
@@ -44,7 +44,7 @@ body {
 	font-family: Resist Sans Text, sans-serif;
 	font-size: 20px;
 	cursor: pointer;
-	transition: background 0.3s, color 0.3s;
+	transition: background 0.3s, color 0.3s, border-color 0.3s;
 }
 
 .btn-container {
@@ -86,16 +86,18 @@ body {
 .btn-secondary:hover {
 	background: #ff71aaf0;
 	color: white;
+	border-color: #ff71aaf0;
 }
 
 .btn-secondary:active {
 	background: #f14289;
 	color: white;
+	border-color: #f14289;
 }
 
 .btn-secondary:disabled {
-	border: 1px solid #b3b3b3;
 	background-color: transparent;
+	border: 1px solid #b3b3b3;
 	color: #b3b3b3;
 }
 
@@ -129,8 +131,8 @@ body {
 
 .checkbox-wrapper {
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
 	gap: 1em;
+	grid-template-columns: repeat(2, 1fr);
 	margin: auto;
 }
 
@@ -147,13 +149,13 @@ body {
 }
 
 .checkbox label {
-	display: inline-block;
-	position: relative;
-	padding: 0;
 	width: 34px;
 	height: 34px;
-	border: 2px solid #000000;
 	background-color: transparent;
+	display: inline-block;
+	padding: 0;
+	border: 2px solid #000000;
+	position: relative;
 	transition: background-color 0.3s, border-color 0.3s, border-width 0.05s;
 	cursor: pointer;
 }
@@ -164,12 +166,12 @@ body {
 }
 
 .checkbox input[type="checkbox"]:checked + label::after {
+	width: 34px;
+	height: 34px;
 	content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none"><path d="M7.4375 16.8559L13.8823 25.0359L26.5241 8.92383" stroke="white" stroke-width="1.98302"/></svg>');
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 34px;
-	height: 34px;
 }
 
 /* Hovered */
@@ -199,8 +201,8 @@ body {
 
 .input-wrapper {
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
 	gap: 1em;
+	grid-template-columns: repeat(2, 1fr);
 	margin: auto;
 }
 
@@ -213,16 +215,16 @@ body {
 }
 
 .input-group {
-	position: relative;
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
+	position: relative;
 }
 
 .input-group label {
-	position: absolute;
 	font-size: 14px;
 	color: #E8524E;
+	position: absolute;
 	bottom: -25px;
 	opacity: 0;
 	transition: opacity 0.3s ease;
@@ -233,10 +235,10 @@ body {
 }
 
 .input-container input {
-	padding: 15px 25px;
-	border-radius: 30px;
-	border: 1px solid transparent;
 	background-color: white;
+	padding: 15px 25px;
+	border: 1px solid transparent;
+	border-radius: 30px;
 	font-size: 16px;
 	transition: border 0.3s;
 }
