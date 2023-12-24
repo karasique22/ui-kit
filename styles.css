@@ -47,6 +47,10 @@ body {
 	transition: background 0.3s, color 0.3s, border-color 0.3s;
 }
 
+.btn:disabled {
+	cursor: default;
+}
+
 .btn-container {
 	width: max-content;
 	display: flex;
