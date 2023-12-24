@@ -30,7 +30,7 @@ button {
 	outline: none;
 }
 
-/* input {
+input {
 	background: none;
 	border: none;
 	font-family: inherit;
@@ -38,7 +38,7 @@ button {
 	margin: 0;
 	padding: 0;
 	color: inherit;
-	
+
 	appearance: none;
 	-webkit-appearance: none;
 	-moz-appearance: none;
@@ -50,4 +50,4 @@ input::placeholder {
 
 input:focus {
 	outline: none;
-} */
+}

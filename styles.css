@@ -194,3 +194,74 @@ body {
 	background-color: transparent;
 	border: 2px solid #0000004d;
 }
+
+/* Inputs */
+
+.input-wrapper {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1em;
+	margin: auto;
+}
+
+.input-container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 2.5em;
+	justify-self: center;
+}
+
+.input-group {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.input-group label {
+	position: absolute;
+	font-size: 14px;
+	color: #E8524E;
+	bottom: -25px;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+.input-group label.visible {
+	opacity: 1;
+}
+
+.input-container input {
+	padding: 15px 25px;
+	border-radius: 30px;
+	border: 1px solid transparent;
+	background-color: white;
+	font-size: 16px;
+	transition: border 0.3s;
+}
+
+.input-container input::placeholder {
+	color: #ababab;
+}
+
+.input-container input:hover:not(:disabled) {
+	border: 1px solid #928989;
+}
+
+.input-container input:focus:not(:disabled) {
+	border: 1px solid #5ba9ff;
+}
+
+.input-container input:disabled {
+	background: #d9d9d9;
+}
+
+.input-container .correct {
+	border: 1px solid #3ec632 !important;
+}
+
+.input-container .error {
+	border: 1px solid #e6423e !important;
+}
+
