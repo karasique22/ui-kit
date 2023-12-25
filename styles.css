@@ -331,6 +331,7 @@ body {
 	font-style: normal;
 	color: #000;
 	letter-spacing: 0.28px;
+	padding: 0;
 }
 
 
@@ -351,12 +352,14 @@ body {
 	padding-top: 18px;
 	padding-bottom: 36px;
 	max-width: 525px;
-	transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+	transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, margin 0.3s ease-in-out;
+	margin: 0;
   }
   
   .visible {
 	max-height: 400px;
 	opacity: 1;
+	margin: 1em 0;
   }
   
 
