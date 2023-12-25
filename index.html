@@ -80,6 +80,7 @@
 					<div class="input-container">
 						<div class="input-group">
 							<input
+								class="input-text"
 								type="text"
 								placeholder="placeholder"
 								value="Input"
@@ -87,6 +88,7 @@
 						</div>
 						<div class="input-group">
 							<input
+								class="input-text"
 								disabled
 								type="text"
 								placeholder="placeholder"
@@ -97,14 +99,158 @@
 
 					<div class="input-container">
 						<div class="input-group">
-							<input type="text" placeholder="placeholder" />
+							<input
+								class="input-text"
+								type="text"
+								placeholder="placeholder"
+							/>
 						</div>
 						<div class="input-group">
 							<input
+								class="input-text"
 								disabled
 								type="text"
 								placeholder="placeholder"
 							/>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container">
+				<h1>POP UP</h1>
+				<div class="popup-group">
+					<button class="sorting-group" onclick="onClickSort1()">
+						<svg
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M4 6H20M10 12H20M16 18H20"
+								stroke="black"
+								stroke-opacity="0.94"
+								stroke-width="1.5"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+						</svg>
+						<span class="sorting-text">cортировать по темам</span>
+					</button>
+					<div class="popup" id="popup1">
+						<div class="popup-content">
+							<div class="popup-header">
+								<div class="popup-title" id="popup-title">
+									Подбери ленту по своему вкусу!
+								</div>
+								<button
+									class="popup-close"
+									onclick="onClickClose1()"
+								>
+									<svg
+										width="27"
+										height="27"
+										viewBox="0 0 27 27"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M4.5 4.5L22.5 22.5"
+											stroke="#ACACAC"
+											stroke-width="1.5"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										/>
+										<path
+											d="M4.5 22.5L22.5 4.5"
+											stroke="#ACACAC"
+											stroke-width="1.5"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										/>
+									</svg>
+								</button>
+							</div>
+							<div class="popup-body">
+								<div class="popup-search-container">
+									<input
+										type="text"
+										class="popup-search-input input-text"
+										placeholder="найти"
+									/>
+								</div>
+								<div class="popup-tags"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="popup-group">
+					<button class="sorting-group" onclick="onClickSort2()">
+						<svg
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M4 6H20M10 12H20M16 18H20"
+								stroke="black"
+								stroke-opacity="0.94"
+								stroke-width="1.5"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+						</svg>
+						<span class="sorting-text">cортировать по темам</span>
+					</button>
+					<div class="popup" id="popup2">
+						<div class="popup-content">
+							<div class="popup-header">
+								<div class="popup-title" id="popup-title">
+									Читайте статьи по своему вкусу!
+								</div>
+								<button
+									class="popup-close"
+									onclick="onClickClose2()"
+								>
+									<svg
+										width="27"
+										height="27"
+										viewBox="0 0 27 27"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M4.5 4.5L22.5 22.5"
+											stroke="#ACACAC"
+											stroke-width="1.5"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										/>
+										<path
+											d="M4.5 22.5L22.5 4.5"
+											stroke="#ACACAC"
+											stroke-width="1.5"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										/>
+									</svg>
+								</button>
+							</div>
+							<div class="popup-body">
+								<div class="popup-search-container">
+									<input
+										type="text"
+										class="popup-search-input input-text"
+										placeholder="найти"
+									/>
+								</div>
+								<div class="popup-tags"></div>
+							</div>
 						</div>
 					</div>
 				</div>

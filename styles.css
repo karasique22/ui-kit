@@ -1,20 +1,48 @@
+@font-face {
+	font-family: Resist Sans Text;
+	font-weight: 400;
+	src: url("fonts/Resist-Sans-Text/ResistSansText-Regular.ttf")
+			format("truetype"),
+		url("fonts/Resist-Sans-Text/ResistSansText-Regular.woff") format("woff"),
+		url("fonts/Resist-Sans-Text/ResistSansText-Regular.woff2")
+			format("woff2"),
+		url("fonts/Resist-Sans-Text/ResistSansText-Regular.eot")
+			format("embedded-opentype");
+}
+
+@font-face {
+	font-family: Resist Sans Text;
+	font-weight: 300;
+	src: url("fonts/Resist-Sans-Text/ResistSansText-Light.ttf")
+			format("truetype"),
+		url("fonts/Resist-Sans-Text/ResistSansText-Light.woff") format("woff"),
+		url("fonts/Resist-Sans-Text/ResistSansText-Light.woff2") format("woff2"),
+		url("fonts/Resist-Sans-Text/ResistSansText-Light.eot")
+			format("embedded-opentype");
+}
+
+@font-face {
+	font-family: Helvetica;
+	src: url("fonts/Helvetica/helvetica_regular.otf") format("opentype");
+}
+
 h1 {
 	width: 100%;
 	margin-bottom: 1em;
 	border-bottom: 2px solid black;
 	font-weight: 400;
 	text-align: start;
+	font-family: Helvetica;
 }
 
 body {
 	background-color: #f4f4f4;
 	padding: 1.5em 0;
-	font-family: Helvetica, sans-serif;
+	font-family: Resist Sans Text;
 	color: #333;
 }
 
 .wrapper {
-	width: 80%;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
@@ -23,7 +51,7 @@ body {
 }
 
 .container {
-	width: 100%;
+	width: 80%;
 }
 
 /* Buttons */
@@ -35,15 +63,17 @@ body {
 }
 
 .btn {
-	width: max-content;
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
 	gap: 10px;
 	padding: 12px 25px;
-	font-family: Resist Sans Text, sans-serif;
+	font-family: Resist Sans Text;
 	font-size: 20px;
-	cursor: pointer;
+	font-weight: 300;
+	/* line-height: 85%; */
+	font-style: normal;
+	letter-spacing: -0.22px;
 	transition: background 0.3s, color 0.3s, border-color 0.3s;
 }
 
@@ -227,7 +257,7 @@ body {
 
 .input-group label {
 	font-size: 14px;
-	color: #E8524E;
+	color: #e8524e;
 	position: absolute;
 	bottom: -25px;
 	opacity: 0;
@@ -238,28 +268,33 @@ body {
 	opacity: 1;
 }
 
-.input-container input {
+.input-text {
 	background-color: white;
-	padding: 15px 25px;
+	padding: 14px 25px;
 	border: 1px solid transparent;
 	border-radius: 30px;
+	font-family: Resist Sans Text;
 	font-size: 16px;
+	font-weight: 300;
+	line-height: normal;
+	font-style: normal;
+	color: #000;
 	transition: border 0.3s;
 }
 
-.input-container input::placeholder {
+.input-text::placeholder {
 	color: #ababab;
 }
 
-.input-container input:hover:not(:disabled) {
+.input-text:hover:not(:disabled) {
 	border: 1px solid #928989;
 }
 
-.input-container input:focus:not(:disabled) {
+.input-text:focus:not(:disabled) {
 	border: 1px solid #5ba9ff;
 }
 
-.input-container input:disabled {
+.input-text:disabled {
 	background: #d9d9d9;
 }
 
@@ -271,3 +306,98 @@ body {
 	border: 1px solid #e6423e !important;
 }
 
+/* Popup */
+
+.sorting-group {
+	width: max-content;
+	display: flex;
+	align-items: center;
+	gap: 3px;
+	margin: auto;
+}
+
+.sorting-text {
+	font-size: 25px;
+	font-weight: 300;
+	font-style: normal;
+	color: #000;
+	letter-spacing: 0.28px;
+}
+
+.popup-group {
+	display: flex;
+	flex-direction: column;
+	width: max-content;
+	margin: auto;
+}
+
+.popup {
+	opacity: 0;
+	background: #fff;
+	border: 1px solid #c6c6c6;
+	border-radius: 15px;
+	max-width: max-content;
+	padding-top: 18px;
+	padding-bottom: 36px;
+	max-width: 525px;
+	transition: opacity 0.3s ease-in-out;
+}
+
+.visible {
+	opacity: 1;
+}
+
+.popup-header {
+	display: inline-flex;
+	border-bottom: 1px solid rgba(167, 167, 167, 0.94);
+	margin: 0 10px;
+	padding-left: 16px;
+	gap: 80px;
+}
+
+.popup-close svg path{
+	stroke: #ACACAC;
+	transition: stroke 0.3s;
+}
+.popup-close:hover svg path{
+	stroke: #CBCBCB;
+}
+
+.popup-title {
+	font-size: 25px;
+	font-weight: 300;
+	font-style: normal;
+	color: #f23883;
+	letter-spacing: 0.28px;
+}
+
+.popup-search-container {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	margin: 27px 24px 10px;
+}
+
+.popup-search-input {
+	border: 1px solid black;
+	width: 100%;
+}
+
+.popup-tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	row-gap: 0;
+	padding: 0 33px;
+	max-width: max-content;
+}
+
+.popup-tag {
+	color: #000;
+	font-size: 25px;
+	font-style: normal;
+	font-weight: 300;
+	line-height: normal;
+	width: fit-content;
+	transition: color 0.3s;
+}
