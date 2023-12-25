@@ -332,20 +332,23 @@ body {
 }
 
 .popup {
+	overflow: hidden;
+	max-height: 0;
 	opacity: 0;
 	background: #fff;
 	border: 1px solid #c6c6c6;
 	border-radius: 15px;
-	max-width: max-content;
 	padding-top: 18px;
 	padding-bottom: 36px;
 	max-width: 525px;
-	transition: opacity 0.3s ease-in-out;
-}
-
-.visible {
+	transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+  
+  .visible {
+	max-height: 400px;
 	opacity: 1;
-}
+  }
+  
 
 .popup-header {
 	display: inline-flex;

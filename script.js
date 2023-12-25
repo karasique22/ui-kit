@@ -49,28 +49,26 @@ inputs.forEach((input) => {
 	);
 });
 
-// popup open-close
-
 function onClickSort1() {
-	const popup = document.getElementById("popup1");
-	popup.classList.toggle("visible");
-}
-
-function onClickClose1() {
-	const popup = document.getElementById("popup1");
-	popup.classList.remove("visible");
-}
-
-function onClickSort2() {
-	const popup = document.getElementById("popup2");
-	popup.classList.toggle("visible");
-}
-
-function onClickClose2() {
-	const popup = document.getElementById("popup2 ");
-	popup.classList.remove("visible");
-}
-
+    const popup = document.getElementById("popup1");
+    popup.classList.toggle("visible");
+  }
+  
+  function onClickClose1() {
+    const popup = document.getElementById("popup1");
+    popup.classList.remove("visible");
+  }
+  
+  function onClickSort2() {
+    const popup = document.getElementById("popup2");
+    popup.classList.toggle("visible");
+  }
+  
+  function onClickClose2() {
+    const popup = document.getElementById("popup2");
+    popup.classList.remove("visible");
+  }
+  
 // popup tags generation
 
 function getRandomPopularity() {
