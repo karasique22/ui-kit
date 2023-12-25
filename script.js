@@ -193,9 +193,6 @@ popupTagsElements.forEach((popupTagsElement, index) => {
 	}
 
 	for (let i = 0; i < tags.length; i++) {
-		if (i >= tags.length) {
-			break; // прерываем цикл, если значение i выходит за пределы массива tags
-		}
 
 		const tag = document.createElement("button");
 		tag.classList.add("popup-tag");
