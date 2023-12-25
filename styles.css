@@ -77,6 +77,10 @@ body {
 	transition: background 0.3s, color 0.3s, border-color 0.3s;
 }
 
+.btn svg path {
+	transition: stroke 0.3s;
+}
+
 .btn:disabled {
 	cursor: default;
 }
@@ -147,6 +151,14 @@ body {
 
 .btn-tertiary1:active {
 	color: #f23883f0;
+}
+
+.btn-tertiary1:hover svg path {
+	stroke: #fe78ae;
+}
+
+.btn-tertiary1:active svg path{
+	stroke: #f23883f0;
 }
 
 .btn-tertiary2 {
@@ -314,15 +326,13 @@ body {
 	align-items: center;
 	gap: 3px;
 	margin: auto;
-}
-
-.sorting-text {
 	font-size: 25px;
 	font-weight: 300;
 	font-style: normal;
 	color: #000;
 	letter-spacing: 0.28px;
 }
+
 
 .popup-group {
 	display: flex;
