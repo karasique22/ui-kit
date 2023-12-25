@@ -8,7 +8,7 @@ function debounce(func, delay) {
 	};
 }
 
-const inputs = document.querySelectorAll(".input-text");
+const inputs = document.querySelectorAll(".input-state");
 
 inputs.forEach((input) => {
 	input.addEventListener(
@@ -179,13 +179,23 @@ tags.sort((a, b) => b.popularity - a.popularity);
 
 let lastTagIndex = 0;
 
-popupTagsElements.forEach((popupTagsElement) => {
+popupTagsElements.forEach((popupTagsElement, index) => {
+    const input = document.getElementById(`popup${index+1}-input`);
     const numberOfTags = Math.floor(Math.random() * 9) + 7;
     for (let i = lastTagIndex; i < numberOfTags + lastTagIndex; i++) {
+        if (i >= tags.length) {
+            break; // прерываем цикл, если значение i выходит за пределы массива tags
+        }
+
         const tag = document.createElement("button");
         tag.classList.add("popup-tag");
         tag.classList.add("btn-tertiary1");
         tag.textContent = tags[i].name;
+
+        tag.addEventListener("click", function() {
+            input.value = tags[i].name;
+        });
+
         popupTagsElement.appendChild(tag);
     }
     lastTagIndex += numberOfTags;
