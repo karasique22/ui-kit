@@ -183,7 +183,6 @@ tags2.sort((a, b) => b.popularity - a.popularity);
 
 popupTagsElements.forEach((popupTagsElement, index) => {
 	const input = document.getElementById(`popup${index + 1}-input`);
-	const numberOfTags = Math.floor(Math.random() * 9) + 7;
 
 	let tags;
 	if (index === 0) {
