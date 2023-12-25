@@ -271,7 +271,7 @@ body {
 	font-size: 14px;
 	color: #e8524e;
 	position: absolute;
-	bottom: -25px;
+	bottom: -40px;
 	opacity: 0;
 	transition: opacity 0.3s ease;
 }
