@@ -75,7 +75,7 @@ function getRandomPopularity() {
 	return Math.floor(Math.random() * 10) + 1;
 }
 
-const tags = [
+const tags1 = [
 	{
 		id: 1,
 		name: "гранж",
@@ -131,43 +131,46 @@ const tags = [
 		name: "продвинутый",
 		popularity: getRandomPopularity(),
 	},
+];
+
+const tags2 = [
 	{
-		id: 12,
+		id: 1,
 		name: "экология",
 		popularity: getRandomPopularity(),
 	},
 	{
-		id: 13,
+		id: 2,
 		name: "эксперименты",
 		popularity: getRandomPopularity(),
 	},
 	{
-		id: 14,
+		id: 3,
 		name: "бренды",
 		popularity: getRandomPopularity(),
 	},
 	{
-		id: 15,
+		id: 4,
 		name: "тренды",
 		popularity: getRandomPopularity(),
 	},
 	{
-		id: 16,
+		id: 5,
 		name: "материалы",
 		popularity: getRandomPopularity(),
 	},
 	{
-		id: 17,
+		id: 6,
 		name: "эко-подход",
 		popularity: getRandomPopularity(),
 	},
 	{
-		id: 18,
+		id: 7,
 		name: "советы",
 		popularity: getRandomPopularity(),
 	},
 	{
-		id: 19,
+		id: 8,
 		name: "личный опыт",
 		popularity: getRandomPopularity(),
 	},
@@ -175,14 +178,21 @@ const tags = [
 
 const popupTagsElements = document.querySelectorAll(".popup-tags");
 
-tags.sort((a, b) => b.popularity - a.popularity);
-
-let lastTagIndex = 0;
+tags1.sort((a, b) => b.popularity - a.popularity);
+tags2.sort((a, b) => b.popularity - a.popularity);
 
 popupTagsElements.forEach((popupTagsElement, index) => {
 	const input = document.getElementById(`popup${index + 1}-input`);
 	const numberOfTags = Math.floor(Math.random() * 9) + 7;
-	for (let i = lastTagIndex; i < numberOfTags + lastTagIndex; i++) {
+
+	let tags;
+	if (index === 0) {
+		tags = tags1;
+	} else if (index === 1) {
+		tags = tags2;
+	}
+
+	for (let i = 0; i < tags.length; i++) {
 		if (i >= tags.length) {
 			break; // прерываем цикл, если значение i выходит за пределы массива tags
 		}
@@ -206,5 +216,4 @@ popupTagsElements.forEach((popupTagsElement, index) => {
 
 		popupTagsElement.appendChild(tag);
 	}
-	lastTagIndex += numberOfTags;
 });
