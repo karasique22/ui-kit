@@ -157,7 +157,7 @@ body {
 	stroke: #fe78ae;
 }
 
-.btn-tertiary1:active svg path{
+.btn-tertiary1:active svg path {
 	stroke: #f23883f0;
 }
 
@@ -334,7 +334,6 @@ body {
 	padding: 0;
 }
 
-
 .popup-group {
 	display: flex;
 	flex-direction: column;
@@ -351,32 +350,33 @@ body {
 	border-radius: 15px;
 	padding-top: 18px;
 	padding-bottom: 36px;
-	max-width: 525px;
-	transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, margin 0.3s ease-in-out;
+	width: 525px;
+	transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out,
+		margin 0.3s ease-in-out;
 	margin: 0;
-  }
-  
-  .visible {
+}
+
+.visible {
 	max-height: 400px;
 	opacity: 1;
 	margin: 1em 0;
-  }
-  
+}
 
 .popup-header {
 	display: inline-flex;
 	border-bottom: 1px solid rgba(167, 167, 167, 0.94);
 	margin: 0 10px;
-	padding-left: 16px;
-	gap: 80px;
+	padding: 0 16px;
+	width: 100%;
+	justify-content: space-between;
 }
 
-.popup-close svg path{
-	stroke: #ACACAC;
+.popup-close svg path {
+	stroke: #acacac;
 	transition: stroke 0.3s;
 }
-.popup-close:hover svg path{
-	stroke: #CBCBCB;
+.popup-close:hover svg path {
+	stroke: #cbcbcb;
 }
 
 .popup-title {
